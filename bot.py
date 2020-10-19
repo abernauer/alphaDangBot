@@ -40,16 +40,16 @@ async def goals(ctx):
 @bot.command()
 async def bruh(ctx):
     """ Returns the dangBRUH emote ten times """
-    await ctx.send(' '.join(['<:dangBRUH:661420374390603776>',
-                             '<:dangBRUH:661420374390603776>',
-                             '<:dangBRUH:661420374390603776>',
-                             '<:dangBRUH:661420374390603776>',
-                             '<:dangBRUH:661420374390603776>',
-                             '<:dangBRUH:661420374390603776>',
-                             '<:dangBRUH:661420374390603776>',
-                             '<:dangBRUH:661420374390603776>',
-                             '<:dangBRUH:661420374390603776>',
-                             '<:dangBRUH:661420374390603776>']))
+    await ctx.send(' '.join([':dangBRUH:661420374390603776',
+                             ':dangBRUH:661420374390603776',
+                             ':dangBRUH:661420374390603776',
+                             ':dangBRUH:661420374390603776',
+                             ':dangBRUH:661420374390603776',
+                             ':dangBRUH:661420374390603776',
+                             ':dangBRUH:661420374390603776',
+                             ':dangBRUH:661420374390603776',
+                             ':dangBRUH:661420374390603776',
+                             ':dangBRUH:661420374390603776']))
 
 
 bot.run(TOKEN)
