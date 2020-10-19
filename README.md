@@ -2,7 +2,7 @@
 A Prototype or proof-of-concept discord bot for Dan Gheesling's discord server. 
 
 
-## Setting up a virtual environment and the api token to connec or to run the bot on the server
+## Setting up a virtual environment and the api token to connect to or to run the bot on the server
 
 * prerequisites have python and pip installed
 * install discord.py
