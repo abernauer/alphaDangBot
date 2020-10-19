@@ -4,16 +4,19 @@ A Prototype or proof-of-concept discord bot for Dan Gheesling's discord server.
 
 ## Setting up a virtual environment and the api token to connect to or to run the bot on the server
 
-* prerequisites have python and pip installed
-* setup a virtual environment
-* install discord.py
-* install dotenv
+1. prerequisites have python and pip installed
+2. fork the repo and run git clone on the repo
+3. setup a virtual environment
+4. Run pip install on the requirements.txt
+5. create a file named .env in your working directory
+6. set the contents of the DISCORD_TOKEN equal to the token on the Bot page on the developer portal
+
 
 make the virtual environment:
 ``` bash
 python3 -m venv bot-env
 ```
-activate the virtual environment:
+activate the virtual environment with the following on Unix and Mac:
 ```
 source bot-env/bin/activate
 ```
@@ -22,14 +25,17 @@ On Windows activate it with:
 bot-env\Scripts\activate.bat
 ```
 
-```bash
-pip install -U discord.py
-
+Run pip install on the requirements.txt:
 ```
-* create a file named .env in your working directory
-* set the contents of the DISCORD_TOKEN equal to the token on the Bot page on the developer portal
+python -m pip install -r requirements.txt
+```
 
+Create the file named .env in your working directory and substitute your-bot-taken with api token:
 ```bash
 DISCORD_TOKEN=your-bot-token
 ```
 
+Finally you can run the bot with:
+```
+python bot.py
+```
