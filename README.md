@@ -39,3 +39,14 @@ Finally you can run the bot with:
 ```
 python bot.py
 ```
+
+## Implemented commands
+
+* goals: the goals command returns the community goals of the 596
+```
+!goals
+```
+* bruh: returns the dangBRUH emote repeated ten times
+```
+!bruh
+```
