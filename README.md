@@ -50,3 +50,7 @@ python bot.py
 ```
 !bruh
 ```
+*schedule: returns the most recent schedule
+```
+!schedule
+```
