@@ -1,6 +1,8 @@
 # bot py
 import os
 import discord
+import aiohttp
+import re
 from dotenv import load_dotenv
 from discord.ext import commands
 
@@ -51,5 +53,17 @@ async def bruh(ctx):
                              '<:dangBRUH:661420374390603776>',
                              '<:dangBRUH:661420374390603776>']))
 
+
+@bot.command()
+async def schedule(ctx):
+    """Returns the most current schedule"""
+    async with aiohttp.ClientSession() as session:
+        async with session.get('https://decapi.me/twitter/latest/dangheesling?search=*Show%20Schedule%20for%20Week*') as resp:
+            respText = await resp.text()
+            dateFor = re.search('(?:\*Show Schedule for Week\* of)\s+(.\S*)', respText).group(1)
+            sched = re.search('(?:\(All Times EST\) )(.*)', respText).group(1)
+            formatS = re.sub(r'(.\s?\S{,5}\:\s{1,2}\d{1,2}AM|.\s?\S{,5}\:\s{1,2}\d{1,2}PM)',r'\n\n\1',sched)
+            buildEmbed = discord.Embed(title=f'Show Schedule for Week of {dateFor}', description=f'https://twitch.tv/dangheesling{formatS}', color=0xFF0000)
+            await ctx.send(embed=buildEmbed)
 
 bot.run(TOKEN)
