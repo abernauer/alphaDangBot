@@ -42,16 +42,17 @@ async def goals(ctx):
 @bot.command()
 async def bruh(ctx):
     """ Returns the dangBRUH emote ten times """
-    await ctx.send(' '.join(['<:dangBRUH:661420374390603776>',
-                             '<:dangBRUH:661420374390603776>',
-                             '<:dangBRUH:661420374390603776>',
-                             '<:dangBRUH:661420374390603776>',
-                             '<:dangBRUH:661420374390603776>',
-                             '<:dangBRUH:661420374390603776>',
-                             '<:dangBRUH:661420374390603776>',
-                             '<:dangBRUH:661420374390603776>',
-                             '<:dangBRUH:661420374390603776>',
-                             '<:dangBRUH:661420374390603776>']))
+    dangBruh = ['<:dangBRUH:661420374390603776>',
+                '<:dangBRUH:661420374390603776>',
+                '<:dangBRUH:661420374390603776>',
+                '<:dangBRUH:661420374390603776>',
+                '<:dangBRUH:661420374390603776>',
+                '<:dangBRUH:661420374390603776>',
+                '<:dangBRUH:661420374390603776>',
+                '<:dangBRUH:661420374390603776>',
+                '<:dangBRUH:661420374390603776>',
+                '<:dangBRUH:661420374390603776>']
+    await ctx.send(' '.join(str(d) for d in dangBruh))
 
 
 @bot.command()
@@ -66,4 +67,18 @@ async def schedule(ctx):
             buildEmbed = discord.Embed(title=f'Show Schedule for Week of {dateFor}', description=f'https://twitch.tv/dangheesling{formatS}', color=0xFF0000)
             await ctx.send(embed=buildEmbed)
 
+            
+#@bot.listen('on_message')
+#async def hugify(message):
+#    """ The bot listens for a message that contains a dangHug currently throws """
+#
+    # we do not want the bot talking to itself
+#    if message.author.id == bot.user.id:
+#        return
+
+    # we have the name and ID of a custom emoji.
+#    dangHug = '<:dangHug:717258283353767959>'
+#    await message.add_reaction(dangHug)
+
+    
 bot.run(TOKEN)
