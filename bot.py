@@ -79,7 +79,7 @@ async def schedule(ctx):
 async def danglishDict(ctx):
      """Returns a random entry from a danglish dictionary"""
 # allocate the dictionary
-dangDict = {"3-2 Drop on Stenoma (phrase) -" : """Reference to an Ultima Online Forever Youtube videofrom 2013 titled "UOForver IDOC PvP." Used to denote when to drop in a Battle Royale game. Reference to an Ultima Online Forever Youtube video from 2013 titled "UOForever IDOC PvP"."Stenoma" is a misspelling of Stunoma, the username of a player who was being targeted in PvP combat in the video.""",
+     dangDict = {"3-2 Drop on Stenoma (phrase) -" : """Reference to an Ultima Online Forever Youtube videofrom 2013 titled "UOForver IDOC PvP." Used to denote when to drop in a Battle Royale game. Reference to an Ultima Online Forever Youtube video from 2013 titled "UOForever IDOC PvP"."Stenoma" is a misspelling of Stunoma, the username of a player who was being targeted in PvP combat in the video.""",
 "Acquiesce (verb) -" : """To give something up or to concede. Also used interchangeably in place of the word "acquire," and sometimes abbreviated as "acq.""""",
 "Andor Landor (noun) -" : """Misspelling of "Anor Londo," a city from Dark Souls. Used interchangably with seemingly and location.""" ,
 "AWWA (phrase) -" : """Appreciate Where We Are. Originally used in Dan's "Getting Over it with Bennet Foddy" playthrough as a reminder that progress is temporary and to be thankful for each bit of progress made.""",
@@ -111,8 +111,8 @@ dangDict = {"3-2 Drop on Stenoma (phrase) -" : """Reference to an Ultima Online 
   "Spicy (adjective) -" : "Tense, especially due to high difficulty.",
   "Tony Hawk (verb) -"  : "To switch direction mid-air. Named after the professional skater.",
   "Uncle Mo (noun) -" : "Personification of momentum, usually in a platformer."}
-result = key, val = random.choice(list(dangDict.items()))
-await ctx.send(print(str(result)))
+     result = key, val = random.choice(list(dangDict.items()))
+     await ctx.send(result)
 
             
 #@bot.listen('on_message')
