@@ -76,7 +76,7 @@ async def schedule(ctx):
 
 
 @bot.command()
-async def danglishDict
+async def danglishDict(ctx):
      """Returns a random entry from a danglish dictionary"""
 # allocate the dictionary
 dangDict = {"3-2 Drop on Stenoma (phrase) -" : """Reference to an Ultima Online Forever Youtube videofrom 2013 titled "UOForver IDOC PvP." Used to denote when to drop in a Battle Royale game. Reference to an Ultima Online Forever Youtube video from 2013 titled "UOForever IDOC PvP"."Stenoma" is a misspelling of Stunoma, the username of a player who was being targeted in PvP combat in the video.""",
@@ -84,7 +84,7 @@ dangDict = {"3-2 Drop on Stenoma (phrase) -" : """Reference to an Ultima Online 
 "Andor Landor (noun) -" : """Misspelling of "Anor Londo," a city from Dark Souls. Used interchangably with seemingly and location.""" ,
 "AWWA (phrase) -" : """Appreciate Where We Are. Originally used in Dan's "Getting Over it with Bennet Foddy" playthrough as a reminder that progress is temporary and to be thankful for each bit of progress made.""",
  "Ball Player (noun) -" : """A strong competitor, often used in the form of the phrase "they've got ball players too" to describe an enemy that is stronger than expected or remind oneself not to underestimate the enemy. """,
-            "Cerso Yeet (proper noun) -" : """Dan's Dark Souls character, who has to date been played in: Dark Souls, Dark Souls 2, Dark Souls 3, Bloodborne, Demon's Souls, Sekiro: Shadows Die Twice, Enter the Gungeon, and Undertale. Partially named after Cersei Lannister from Game of Thrones.""", "Chip and a Chair (phrase) - " : """Poker phrase that refers to a player with a single chip and a seat at the table, despite being in the worst possible position, is still not completely out of the game yet. Synonymous with "It's not over until it's over."""",
+            "Cerso Yeet (proper noun) -" : """Dan's Dark Souls character, who has to date been played in: Dark Souls, Dark Souls 2, Dark Souls 3, Bloodborne, Demon's Souls, Sekiro: Shadows Die Twice, Enter the Gungeon, and Undertale. Partially named after Cersei Lannister from Game of Thrones.""", "Chip and a Chair (phrase) - " : """Poker phrase that refers to a player with a single chip and a seat at the table, despite being in the worst possible position, is still not completely out of the game yet. Synonymous with "It's not over until it's over.""""",
   "Coleman (noun) - " : ''' A player who \"camps\" in a shooter game. (Staying in one position and waiting for enemies.) Reference to the brand of camping equipment.''',
   'Crack Open a Cold One (phrase) -' : '''Catchphrase that precedes almost every Team Unity Tuesday intro, usually with a pop-top soda can sound effect (real or digital) to accompany it. \"Cracking open a cold one\" is a phrase that means to open a cold beverage (often a beer or soda) and relax. Abbreviated as COAC1.''',
   'DGDQ(phrase)-' : """Dan Gheesling Done Quick, a parody of AGDQ (Awesome Games Done Quick) and SGDQ (Summer Games Done Quick), large annual charity speedrunning events. Used to signify a speedrun attempt.""",
@@ -92,7 +92,7 @@ dangDict = {"3-2 Drop on Stenoma (phrase) -" : """Reference to an Ultima Online 
   "Frame Perfect (adjective) -" : '''So difficult so as to only be possible on an exact frame of gameplay. Also known as "Frame Perfecticity" or abbreviated as FP.''',
   "Front Seat (verb) -" : '''To give advice to someone when asked. The opposite of "backseating"'',
   "Good Eats or Good Wood (noun) -" : "Quality loot or performance. Can be used interchangeably with each other.,
-  "Guldan Shower (noun) -" : '''An infamous invention of Dan's in the Jackbox Party Pack 5 game Patently Stupid. Derived from the phrase "golden shower" and Gul'dan, a recurring antagonist in the Warcraft series.''',
+  "Guldan Shower (noun) -" : r"""An infamous invention of Dan's in the Jackbox Party Pack 5 game Patently Stupid. Derived from the phrase "golden shower" and Gul'dan, a recurring antagonist in the Warcraft series.''',
   "Hash Brown (noun) -" : """Spike Trap block from the Mario series. Named after a supposed resemblance to the breakfast food.""",
   "Jail Cell Made Entirely of Cake (phrase) -" : ''' Rhetorical question often asked by Dan: "How do you get out of a jail cell made entirely out of cake? One bite at a time." Refers to the solution to a difficult or arduous task being slow, incremental progress.''',
   "Let's Go (phrase) -" : '''An exclamation that either signifies victory, excitement, or preparedness to move ahead''',
@@ -111,8 +111,8 @@ dangDict = {"3-2 Drop on Stenoma (phrase) -" : """Reference to an Ultima Online 
   "Spicy (adjective) -" : "Tense, especially due to high difficulty.",
   "Tony Hawk (verb) -"  : "To switch direction mid-air. Named after the professional skater.",
   "Uncle Mo (noun) -" : "Personification of momentum, usually in a platformer."}
-  result = key, val = random.choice(list(dangDict.items()))
-  await ctx.send(print(str(result)))
+result = key, val = random.choice(list(dangDict.items()))
+await ctx.send(print(str(result)))
 
             
 #@bot.listen('on_message')
