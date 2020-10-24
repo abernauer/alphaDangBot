@@ -112,7 +112,7 @@ dangDict = {"3-2 Drop on Stenoma (phrase) -" : """Reference to an Ultima Online 
   "Tony Hawk (verb) -"  : "To switch direction mid-air. Named after the professional skater.",
   "Uncle Mo (noun) -" : "Personification of momentum, usually in a platformer."}
   result = key, val = random.choice(list(dangDict.items()))
-  await ctx.send(print(str(result)
+  await ctx.send(print(str(result)))
 
             
 #@bot.listen('on_message')
