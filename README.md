@@ -54,3 +54,16 @@ python bot.py
 ```
 !schedule
 ```
+
+* choose: chooses between multiple choices
+```
+!choose DarkSouls HollowKnight
+```
+* danglishDict: returns one random entry from the danglish dictionary
+```
+!danglishDict
+```
+* awwwa: returns Appreciate Where We Are
+```
+!awwa
+```

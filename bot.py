@@ -114,6 +114,11 @@ async def danglishDict(ctx):
      result = key, val = random.choice(list(dangDict.items()))
      await ctx.send(result)
 
+@bot.command(description='For when you cant decide on pizza or a sub')
+async def choose(ctx, *choices: str):
+    """Chooses between multiple choices."""
+    await ctx.send(random.choice(choices))
+     
             
 #@bot.listen('on_message')
 #async def hugify(message):
@@ -126,6 +131,11 @@ async def danglishDict(ctx):
     # we have the name and ID of a custom emoji.
 #    dangHug = '<:dangHug:717258283353767959>'
 #    await message.add_reaction(dangHug)
+@bot.listen('on_message')
+async def thumbsUp(message):
+    emoji = '\N{THUMBS UP SIGN}'
+    await message.add_reaction(emoji)
+
 
     
 bot.run(TOKEN)
