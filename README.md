@@ -63,7 +63,7 @@ python bot.py
 ```
 !danglishDict
 ```
-* awwwa: returns Appreciate Where We Are
+* awwa: returns Appreciate Where We Are
 ```
 !awwa
 ```
