@@ -40,6 +40,7 @@ dangBruh = ['<:dangBRUH:661420374390603776>',
                 '<:dangBRUH:661420374390603776>',
                 '<:dangBRUH:661420374390603776>']
 
+DAE = "DAE = Overly Complicated"
 
 @bot.event
 async def on_ready():
@@ -123,7 +124,11 @@ async def danglishDict(ctx):
 async def choose(ctx, *choices: str):
     """Chooses between multiple choices."""
     await ctx.send(random.choice(choices))
-     
+
+@bot.command(description="For when someone isnt using first grade vernacular")
+async def dae(ctx):
+    """Returns the meaning of the term DAE"""
+    await cts.send(DAE)
             
 #@bot.listen('on_message')
 #async def hugify(message):
