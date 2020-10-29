@@ -25,6 +25,21 @@ intents.members = True
 
 bot = commands.Bot(command_prefix='!', description=description, intents=intents)
 
+GOALS = "1. clean. 2. positive. 3. entertainment".upper()
+
+AWWA = "appreciate where we are".title()
+
+dangBruh = ['<:dangBRUH:661420374390603776>',
+                '<:dangBRUH:661420374390603776>',
+                '<:dangBRUH:661420374390603776>',
+                '<:dangBRUH:661420374390603776>',
+                '<:dangBRUH:661420374390603776>',
+                '<:dangBRUH:661420374390603776>',
+                '<:dangBRUH:661420374390603776>',
+                '<:dangBRUH:661420374390603776>',
+                '<:dangBRUH:661420374390603776>',
+                '<:dangBRUH:661420374390603776>']
+
 
 @bot.event
 async def on_ready():
@@ -37,29 +52,19 @@ async def on_ready():
 @bot.command()
 async def goals(ctx):
     """Returns the three goals of the 596"""
-    await ctx.send("1. clean. 2. positive. 3. entertainment".upper())
+    await ctx.send(GOALS)
 
 
 @bot.command()
 async def awwa(ctx):
     """Returns Appreciate Where We Are"""
-    await ctx.send("appreciate where we are".title())
+    await ctx.send(AWWA)
 
     
 @bot.command()
 async def bruh(ctx):
     """ Returns the dangBRUH emote ten times """
-    dangBruh = ['<:dangBRUH:661420374390603776>',
-                '<:dangBRUH:661420374390603776>',
-                '<:dangBRUH:661420374390603776>',
-                '<:dangBRUH:661420374390603776>',
-                '<:dangBRUH:661420374390603776>',
-                '<:dangBRUH:661420374390603776>',
-                '<:dangBRUH:661420374390603776>',
-                '<:dangBRUH:661420374390603776>',
-                '<:dangBRUH:661420374390603776>',
-                '<:dangBRUH:661420374390603776>']
-    await ctx.send(' '.join(str(d) for d in dangBruh))
+    await ctx.send(' '.join(dangBruh))
 
 
 @bot.command()
